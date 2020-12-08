@@ -12,3 +12,10 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// Generate a password placeholder
+// TODO actually generate a password
+function generatePassword() {
+  return "password12345";
+}
