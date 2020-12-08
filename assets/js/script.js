@@ -20,8 +20,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-// Generate a password placeholder
-// TODO actually generate a password
+// Generate a password
 function generatePassword() {
     // initialize variables for the password criteria
     var passwordLength = 0;
@@ -48,7 +47,13 @@ function generatePassword() {
     if (wantsNumeric) { userCharset += numbers; }
     if (wantsSpecial) { userCharset += specials; }
 
-    console.log(userCharset);
+    // initialize a variable to generate the password into
+    var password = "";
 
-    return "password12345";
+    // loop a number of times equal to the desired length
+    for (let i = 0; i < passwordLength; i++) {
+        password += userCharset[Math.floor(Math.random() * userCharset.length)];
+    }
+
+    return password;
 }
