@@ -21,6 +21,7 @@ generateBtn.addEventListener("click", writePassword);
 
 
 // Generate a password
+// This function is the part of this application that I wrote. The rest is starter code that was given to me.
 function generatePassword() {
     // initialize variables for the password criteria
     var passwordLength = 0;
