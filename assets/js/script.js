@@ -19,7 +19,7 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
     // initialize variables for the password criteria
     var passwordLength = 0;
-    var lowercase = false, uppercase = false, numeric = false, special = false;
+    var wantsLowercase = false, wantsUppercase = false, wantsNumeric = false, wantsSpecial = false;
 
     // ask for the password length, and keep asking until they enter a valid response
     while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
@@ -27,12 +27,12 @@ function generatePassword() {
     }
 
     // ask which character sets the user wants included in the password, and keep asking if they don't choose any
-    while (!(lowercase || uppercase || numeric || special)) {
+    while (!(wantsLowercase || wantsUppercase || wantsNumeric || wantsSpecial)) {
         alert("Your password may contain lowercase letters, uppercase letters, numbers, and/or special characters.\nChoose at least one type");
-        lowercase = confirm("Do you want your password to include lowercase letters?");
-        uppercase = confirm("Do you want your password to include uppercase letters?");
-        numeric = confirm("Do you want your password to include numbers?");
-        special = confirm("Do you want your password to include special characters?");
+        wantsLowercase = confirm("Do you want your password to include lowercase letters?");
+        wantsUppercase = confirm("Do you want your password to include uppercase letters?");
+        wantsNumeric = confirm("Do you want your password to include numbers?");
+        wantsSpecial = confirm("Do you want your password to include special characters?");
     }
 
     return "password12345";
