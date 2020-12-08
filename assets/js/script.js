@@ -1,3 +1,10 @@
+// Define character sets
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789";
+var specials = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+console.log(lowercase + "\n" + uppercase + "\n" + numbers + "\n" + specials);
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
