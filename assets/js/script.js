@@ -3,7 +3,6 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var specials = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-console.log(lowercase + "\n" + uppercase + "\n" + numbers + "\n" + specials);
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -12,7 +11,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
-    
+
     passwordText.value = password;
 
 }
@@ -41,6 +40,15 @@ function generatePassword() {
         wantsNumeric = confirm("Do you want your password to include numbers?");
         wantsSpecial = confirm("Do you want your password to include special characters?");
     }
+
+    // create a variable for the characters the user wants and add each character set that they selected
+    var userCharset = "";
+    if (wantsLowercase) { userCharset += lowercase; }
+    if (wantsUppercase) { userCharset += uppercase; }
+    if (wantsNumeric) { userCharset += numbers; }
+    if (wantsSpecial) { userCharset += specials; }
+
+    console.log(userCharset);
 
     return "password12345";
 }
